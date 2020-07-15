@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:ital,wght@1,300&family=Monoton&family=Fondamento&family=Lora&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <title>Web Series</title>
+</head>
+
+<body>
+    <!-- Heading Starts -->
+    <div class="container" id="heading">
+        <div class="container-fluid">
+            <h1 id="name">Satyam Gaur</h1>
+            <h6 id="Aboutme">Web Series</h6>
+        </div>
+    </div>
+    <!-- Heading Ends -->
+
+    <!-- Navbar Starts -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">S</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">About Me <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/academics">Academics</a>
+                <a class="nav-item nav-link" href="/projects">Projects</a>
+                <a class="nav-item nav-link active" href="/webseries">Web Series</a>
+                <a class="nav-item nav-link" href="/socialmedia">Social Media</a>
+                <a class="nav-item nav-link" href="/reviews">Reviews</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Ends -->
+
+    <hr id="tophr">
+
+    <h4 id="seriesHeading">These are some of the Web Series, which I loved watching and I would recommend!</h4>
+
+    <!-- Content Starts -->
+    <div class="container">
+        <div class="row">
+            <% series.forEach(function(current) { %>
+                <div class="card col-xl-3 col-lg-4 col-md-6 col-12">
+                    <img src="<%= current.imgsrc %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= current.name %></h5>
+                        <p class="card-text">
+                            My Rating: <%= current.rating %>/5
+                            <br>
+                            Favourite Character: <%= current.favCharacter %>
+                        </p>
+                    </div>
+                </div>
+            <% }) %>
+            <!-- <div class="card col-xl-3 col-lg-4 col-md-6 col-12">
+                <img src="/images/got.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Game of Thrones</h5>
+                    <p class="card-text">
+                        My Rating: 5/5
+                        <br>
+                        Favourite Character: Jon Snow
+                    </p>
+                </div>
+            </div>
+            <div class="card col-xl-3 col-lg-4 col-md-6 col-12">
+                <img src="/images/sherlock.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sherlock</h5>
+                    <p class="card-text">
+                        My Rating: 5/5
+                        <br>
+                        Favourite Character: Sherlock Holmes
+                    </p>
+                </div>
+            </div>
+            <div class="card col-xl-3 col-lg-4 col-md-6 col-12">
+                <img src="/images/sacred.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sacred Games</h5>
+                    <p class="card-text">
+                        My Rating: 4/5
+                        <br>
+                        Favourite Character: Ganesh Gaitonde
+                    </p>
+                </div>
+            </div>
+            <div class="card col-xl-3 col-lg-4 col-md-6 col-12">
+                <img src="/images/mirzapur.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mirzapur</h5>
+                    <p class="card-text">
+                        My Rating: 4.5/5
+                        <br>
+                        Favourite Character: Guddu Bhaiya
+                    </p>
+                </div>
+            </div>
+            <div class="card col-xl-3 col-lg-4 col-md-6 col-12">
+                <img src="/images/dark.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Dark</h5>
+                    <p class="card-text">
+                        My Rating: 4.5/5
+                        <br>
+                        Favourite Character: Jonas Kahnwald
+                    </p>
+                </div>
+            </div>
+            <div class="card col-xl-3 col-lg-4 col-md-6 col-12">
+                <img src="/images/stranger.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Stranger Things</h5>
+                    <p class="card-text">
+                        My Rating: 4/5
+                        <br>
+                        Favourite Character: Max
+                    </p>
+                </div>
+            </div>
+            <div class="card col-xl-3 col-lg-4 col-md-6 col-12">
+                <img src="/images/daredevil.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Daredevil</h5>
+                    <p class="card-text">
+                        My Rating: 3.5/5
+                        <br>
+                        Favourite Character: Matt Murdock
+                    </p>
+                </div>
+            </div>
+            <div class="card col-xl-3 col-lg-4 col-md-6 col-12">
+                <img src="/images/breaking.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Breaking Bad</h5>
+                    <p class="card-text">
+                        My Rating: 4.5/5
+                        <br>
+                        Favourite Character: Jesse Pinkman
+                    </p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Content Ends -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
